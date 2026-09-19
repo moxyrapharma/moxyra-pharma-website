@@ -4,33 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moxyra Pharma | Official Website</title>
-    <meta name="description" content="Moxyra Pharma - Advanced Cosmeceuticals and Quality Dietary Supplements.">
-    <!-- Bootstrap Standard LTR CSS -->
+    <meta name="description" content="Moxyra Pharma specialized in high-efficacy cosmeceuticals and advanced dietary supplements.">
+    <!-- Bootstrap LTR CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: Cairo Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --primary-color: #0056b3; --accent-color: #00a896; --dark-bg: #1a252f; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; color: #333; }
+        :root { 
+            --primary-color: #0056b3; 
+            --accent-color: #00a896; 
+            --dark-bg: #1a252f; 
+        }
+        
+        /* Apply Cairo font across all elements */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, button { 
+            font-family: 'Cairo', sans-serif !important; 
+        }
+        
+        body { background-color: #f8f9fa; color: #333; }
         .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-        .navbar-brand { font-weight: bold; color: var(--primary-color) !important; font-size: 1.5rem; }
+        .navbar-brand { font-weight: 800; color: var(--primary-color) !important; font-size: 1.5rem; }
+        .nav-link { font-weight: 600; }
         .hero-section { background: linear-gradient(135deg, #eef5fc 0%, #e6f4f1 100%); padding: 100px 0 80px; }
-        .hero-title { color: var(--primary-color); font-weight: 800; font-size: 2.5rem; }
-        .btn-custom-primary { background-color: var(--primary-color); color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 600; }
+        .hero-title { color: var(--primary-color); font-weight: 800; font-size: 2.5rem; line-height: 1.4; }
+        .btn-custom-primary { background-color: var(--primary-color); color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 700; }
         .btn-custom-primary:hover { background-color: #004085; color: #fff; }
-        .btn-custom-success { background-color: #25d366; color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 600; }
+        .btn-custom-success { background-color: #25d366; color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 700; }
         .btn-custom-success:hover { background-color: #1eb954; color: #fff; }
-        .card-custom { border: none; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card-custom:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .feature-icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 15px; }
         .footer { background-color: var(--dark-bg); color: #adb5bd; padding: 50px 0 20px; }
-        .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 600; text-decoration: none; }
+        .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 700; text-decoration: none; }
         .lang-switch:hover { background-color: var(--primary-color); color: #fff; }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- Header Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fa-solid fa-prescription-bottle-medical me-2"></i>Moxyra Pharma</a>
@@ -41,12 +54,12 @@
                 <ul class="navbar-nav ms-auto align-items-center gap-2">
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#vision">Vision & Mission</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#what-we-do">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Moxyra?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#partners">Our Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#what-we-do">Scope of Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                    <li class="nav-item ms-lg-3"><a class="lang-switch" href="index.html"><i class="fa-solid fa-globe me-1"></i>العربية</a></li>
+                    <li class="nav-item ms-lg-3"><a class="lang-switch" href="home.html"><i class="fa-solid fa-globe me-1"></i>العربية</a></li>
                 </ul>
             </div>
         </div>
@@ -57,11 +70,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    <h1 class="hero-title mb-3">Innovation for Better Healthcare & Living</h1>
-                    <p class="lead text-muted mb-4">Moxyra Pharma develops and formulates advanced cosmeceutical solutions and quality dietary supplements adherence to international standards.</p>
+                    <h1 class="hero-title mb-3">Unique Innovation for Integrated Care and Better Health</h1>
+                    <p class="lead text-muted mb-4 fs-5" style="font-weight: 500;">Moxyra Pharma specializes in developing and manufacturing innovative therapeutic cosmeceuticals and advanced dietary supplements according to the highest international quality standards.</p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
                         <a href="#products" class="btn btn-custom-primary">Explore Products</a>
-                        <a href="https://wa.me/" target="_blank" class="btn btn-custom-success"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Direct</a>
+                        <a href="https://wa.me/201553618008" target="_blank" class="btn btn-custom-success"><i class="fa-brands fa-whatsapp me-2"></i>Contact via WhatsApp</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center">
@@ -73,172 +86,15 @@
 
     <!-- About Section -->
     <section id="about" class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-primary">About Moxyra Pharma</h2>
-                <div class="mx-auto style-bar" style="width: 60px; height: 3px; background-color: var(--accent-color);"></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center text-lg-start fs-5 text-secondary">
-                    <p>Moxyra Pharma was established to deliver innovative solutions in dermatological care and health maintenance. We formulate scientifically driven products utilizing potent active ingredients to meet market demands.</p>
-                </div>
-            </div>
+        <div class="container text-center">
+            <h2 class="fw-bold text-primary mb-3">About Moxyra Pharma</h2>
+            <p class="text-secondary fs-5">Moxyra Pharma was established to introduce a new concept in healthcare and beauty by innovating advanced formulas based on modern scientific solutions.</p>
         </div>
     </section>
 
-    <!-- Vision & Mission -->
-    <section id="vision" class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card card-custom p-4 h-100">
-                        <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
-                        <h4 class="fw-bold text-primary mb-3">Our Vision</h4>
-                        <p class="text-muted fs-6">To become a trusted regional leader in cosmeceutical and pharmaceutical innovation, providing safe and highly effective products.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-custom p-4 h-100">
-                        <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
-                        <h4 class="fw-bold text-primary mb-3">Our Mission</h4>
-                        <p class="text-muted fs-6">Delivering high-quality formulations backed by clinical excellence and optimal manufacturing standards to empower healthcare professional and patients.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Do -->
-    <section id="what-we-do" class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-primary">What We Do</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <div class="card card-custom p-4 h-100">
-                        <i class="fa-solid fa-pump-medical feature-icon"></i>
-                        <h5 class="fw-bold">Advanced Cosmeceuticals</h5>
-                        <p class="text-muted small">Developing effective skincare and haircare systems tailored for specific clinical needs.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="card card-custom p-4 h-100">
-                        <i class="fa-solid fa-tablets feature-icon"></i>
-                        <h5 class="fw-bold">Dietary Supplements</h5>
-                        <p class="text-muted small">Formulating premium supplements for respiratory, digestive, and general wellbeing.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="card card-custom p-4 h-100">
-                        <i class="fa-solid fa-industry feature-icon"></i>
-                        <h5 class="fw-bold">Contract & Toll Manufacturing</h5>
-                        <p class="text-muted small">Offering expert formulation design, regulatory support, and production partnerships.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-primary">Our Products</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 p-3 text-center">
-                        <div class="card-body">
-                            <i class="fa-solid fa-bottle-droplet text-primary mb-3" style="font-size: 3rem;"></i>
-                            <h5 class="card-title fw-bold">Skincare Line (Uryhip)</h5>
-                            <p class="card-text text-muted small">Hydrating & restorative formulas rich in Urea, Panthenol, and Rosehip oil.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 p-3 text-center">
-                        <div class="card-body">
-                            <i class="fa-solid fa-spray-can-sparkles text-info mb-3" style="font-size: 3rem;"></i>
-                            <h5 class="card-title fw-bold">Haircare Line (Moxygain)</h5>
-                            <p class="card-text text-muted small">Comprehensive hair repair and anti-dandruff formulations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 p-3 text-center">
-                        <div class="card-body">
-                            <i class="fa-solid fa-capsules text-warning mb-3" style="font-size: 3rem;"></i>
-                            <h5 class="card-title fw-bold">Nutraceuticals</h5>
-                            <p class="card-text text-muted small">Targeted respiratory support, digestive wellness, and magnesium complexes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Partner -->
-    <section id="why-us" class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-primary">Why Partner with Moxyra?</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3 text-center">
-                    <i class="fa-solid fa-microscope text-success fs-1 mb-2"></i>
-                    <h6 class="fw-bold">Scientific Excellence</h6>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fa-solid fa-graduation-cap text-primary fs-1 mb-2"></i>
-                    <h6 class="fw-bold">Professional Training</h6>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fa-solid fa-truck-fast text-info fs-1 mb-2"></i>
-                    <h6 class="fw-bold">Flexible Distribution</h6>
-                </div>
-                <div class="col-md-3 text-center">
-                    <i class="fa-solid fa-certificate text-warning fs-1 mb-2"></i>
-                    <h6 class="fw-bold">Regulatory Approved</h6>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners -->
-    <section id="partners" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text-primary">Our Partners</h2>
-                <p class="text-muted">Proudly partnering with leading pharmacy chains, clinics, and distributors.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Address & Contact Footer -->
     <footer id="contact" class="footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <h4 class="text-white fw-bold mb-3">Moxyra Pharma</h4>
-                    <p class="small text-muted">A pharmaceutical company dedicated to advancing health and cosmeceuticals.</p>
-                    <p class="small mb-1"><i class="fa-solid fa-location-dot me-2 text-primary"></i><strong>Address:</strong> Alexandria, Egypt</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <h4 class="text-white fw-bold mb-3">Contact Us</h4>
-                    <p class="small mb-1"><i class="fa-solid fa-envelope me-2 text-primary"></i>info@moxyrapharma.com</p>
-                    <p class="small mb-3"><i class="fa-brands fa-whatsapp me-2 text-success"></i>Direct WhatsApp Support</p>
-                    <div class="d-flex justify-content-md-end gap-3 fs-5">
-                        <a href="#" class="text-light"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" class="text-light"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-secondary mt-4">
-            <div class="text-center small">
-                <p class="mb-0">&copy; 2026 Moxyra Pharma. All Rights Reserved.</p>
-            </div>
+        <div class="container text-center small">
+            <p class="mb-0">&copy; 2026 Moxyra Pharma. All Rights Reserved.</p>
         </div>
     </footer>
 
