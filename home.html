@@ -1,106 +1,34 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موكسيرا فارما | Moxyra Pharma</title>
-    <meta name="description" content="شركة موكسيرا فارما لمستحضرات التجميل العالية الفعالية والمكملات الغذائية متقدمة الجودة.">
-    <!-- Bootstrap RTL CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts: Cairo Font (Same as Parkville Pharma) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { 
-            --primary-color: #0056b3; 
-            --accent-color: #00a896; 
-            --dark-bg: #1a252f; 
-        }
-        
-        /* تطبيق خط القاهرة Cairo على جميع نصوص العناوين والفقرات */
-        body, h1, h2, h3, h4, h5, h6, p, a, span, button { 
-            font-family: 'Cairo', sans-serif !important; 
-        }
-        
-        body { background-color: #f8f9fa; color: #333; }
-        .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-        .navbar-brand { font-weight: 800; color: var(--primary-color) !important; font-size: 1.5rem; }
-        .nav-link { font-weight: 600; }
-        .hero-section { background: linear-gradient(135deg, #eef5fc 0%, #e6f4f1 100%); padding: 100px 0 80px; }
-        .hero-title { color: var(--primary-color); font-weight: 800; font-size: 2.5rem; line-height: 1.4; }
-        .btn-custom-primary { background-color: var(--primary-color); color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 700; }
-        .btn-custom-primary:hover { background-color: #004085; color: #fff; }
-        .btn-custom-success { background-color: #25d366; color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 700; }
-        .btn-custom-success:hover { background-color: #1eb954; color: #fff; }
-        .card-custom { border: none; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card-custom:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .feature-icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 15px; }
-        .footer { background-color: var(--dark-bg); color: #adb5bd; padding: 50px 0 20px; }
-        .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 700; text-decoration: none; }
-        .lang-switch:hover { background-color: var(--primary-color); color: #fff; }
-    </style>
-</head>
-<body>
-
-    <!-- القائمة العلوية Header -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-prescription-bottle-medical me-2"></i>Moxyra Pharma</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center gap-2">
-                    <li class="nav-item"><a class="nav-link" href="#about">عن الشركة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#vision">الرؤية والرسالة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#what-we-do">مجالات عملنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">منتجاتنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-us">لماذا موكسيرا؟</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#partners">شركاؤنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
-                    <li class="nav-item ms-lg-3"><a class="lang-switch" href="en.html"><i class="fa-solid fa-globe me-1"></i>English</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- الواجهة الرئيسية Home / Hero -->
-    <section class="hero-section text-center text-lg-start" style="margin-top: 60px;">
-        <div class="container">
+<!-- الواجهة الرئيسية Home / Hero -->
+    <section class="hero-section text-center text-lg-start" style="
+        margin-top: 60px;
+        background: linear-gradient(rgba(11, 26, 48, 0.45), rgba(11, 26, 48, 0.45)), url('cover.jpg') no-repeat center center/cover;
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        position: relative;
+    ">
+        <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-7 mb-4 mb-lg-0">
-                    <h1 class="hero-title mb-3">ابتكار فريد لرعاية متكاملة وصحة أفضل</h1>
-                    <p class="lead text-muted mb-4 fs-5" style="font-weight: 500;">شركة موكسيرا فارما متخصصة في تطوير وتصنيع مستحضرات التجميل العلاجية والمكملات الغذائية المبتكرة وفق أعلى معايير الجودة العالمية.</p>
+                <div class="col-lg-7 col-xl-6 me-auto p-4 p-lg-5" style="
+                    background: rgba(11, 26, 48, 0.65);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                    border-radius: 16px;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                ">
+                    <span class="badge bg-primary mb-3 px-3 py-2 fs-6">Moxyra Pharma</span>
+                    <h1 class="hero-title mb-3 text-white fw-bold display-5">حيث يلتقي الابتكار بالرعاية الصحية</h1>
+                    <p class="lead text-light mb-4 fs-5" style="font-weight: 500;">
+                        شركة موكسيرا فارما متخصصة في تطوير وتصنيع مستحضرات التجميل العلاجية والمكملات الغذائية المبتكرة وفق أعلى معايير الجودة العالمية.
+                    </p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#products" class="btn btn-custom-primary">استكشف منتجاتنا</a>
-                        <a href="https://wa.me/201553618008" target="_blank" class="btn btn-custom-success"><i class="fa-brands fa-whatsapp me-2"></i>تواصل عبر واتساب</a>
+                        <a href="#products" class="btn btn-custom-primary btn-lg fs-6">استكشف منتجاتنا</a>
+                        <a href="https://wa.me/201553618008" target="_blank" class="btn btn-custom-success btn-lg fs-6">
+                            <i class="fa-brands fa-whatsapp me-2"></i>تواصل عبر واتساب
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center">
-                    <i class="fa-solid fa-notes-medical text-primary" style="font-size: 10rem; opacity: 0.15;"></i>
-                </div>
             </div>
         </div>
     </section>
-
-    <!-- باقي الأقسام -->
-    <section id="about" class="py-5 bg-white">
-        <div class="container text-center">
-            <h2 class="fw-bold text-primary mb-3">عن موكسيرا فارما</h2>
-            <p class="text-secondary fs-5">تأسست موكسيرا فارما بهدف تقديم مفهوم جديد في عالم الرعاية الصحية والجمالية عبر ابتكار تركيبات متقدمة تعتمد على الحلول العلمية الحديثة.</p>
-        </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="container text-center small">
-            <p class="mb-0">&copy; 2026 Moxyra Pharma. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
