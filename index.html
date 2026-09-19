@@ -3,15 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moxyra Pharma</title>
+    <title>موكسيرا فارما | Moxyra Pharma</title>
+    <meta name="description" content="شركة موكسيرا فارما لمستحضرات التجميل العالية الفعالية والمكملات الغذائية متقدمة الجودة.">
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: system-ui, sans-serif; text-align: center; padding: 60px 20px; background-color: #f8f9fa; color: #212529; }
-        h1 { color: #0d6efd; font-size: 2.5rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; color: #6c757d; }
+        :root { --primary-color: #0056b3; --accent-color: #00a896; --dark-bg: #1a252f; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; color: #333; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .navbar-brand { font-weight: bold; color: var(--primary-color) !important; font-size: 1.5rem; }
+        .hero-section { background: linear-gradient(135deg, #eef5fc 0%, #e6f4f1 100%); padding: 100px 0 80px; }
+        .hero-title { color: var(--primary-color); font-weight: 800; font-size: 2.5rem; }
+        .btn-custom-primary { background-color: var(--primary-color); color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 600; }
+        .btn-custom-primary:hover { background-color: #004085; color: #fff; }
+        .btn-custom-success { background-color: #25d366; color: #fff; border-radius: 8px; padding: 12px 28px; font-weight: 600; }
+        .btn-custom-success:hover { background-color: #1eb954; color: #fff; }
+        .card-custom { border: none; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card-custom:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .feature-icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 15px; }
+        .footer { background-color: var(--dark-bg); color: #adb5bd; padding: 50px 0 20px; }
+        .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 600; text-decoration: none; }
+        .lang-switch:hover { background-color: var(--primary-color); color: #fff; }
     </style>
 </head>
 <body>
-    <h1>Moxyra Pharma</h1>
-    <p>الموقع الرسمي قيد الإعداد وسيكون متاحاً قريباً جداً.</p>
+
+    <!-- القائمة العلوية Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-prescription-bottle-medical me-2"></i>Moxyra Pharma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">عن الشركة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision">الرؤية والرسالة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#what-we-do">مجالات عملنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">منتجاتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">لماذا موكسيرا؟</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">شركاؤنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+                    <li class="nav-item ms-lg-3"><a class="lang-switch" href="en.html"><i class="fa-solid fa-globe me-1"></i>English</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الواجهة الرئيسية Home / Hero -->
+    <section class="hero-section text-center text-lg-start" style="margin-top: 60px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h1 class="hero-title mb-3">ابتكار فريد لرعاية متكاملة وصحة أفضل</h1>
+                    <p class="lead text-muted mb-4">شركة موكسيرا فارما متخصصة في تطوير وتصنيع مستحضرات التجميل العلاجية والمكملات الغذائية المبتكرة وفق أعلى معايير الجودة العالمية.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#products" class="btn btn-custom-primary">استكشف منتجاتنا</a>
+                        <a href="https://wa.me/" target="_blank" class="btn btn-custom-success"><i class="fa-brands fa-whatsapp me-2"></i>تواصل عبر واتساب</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <i class="fa-solid fa-notes-medical text-primary" style="font-size: 10rem; opacity: 0.15;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- عن الشركة About -->
+    <section id="about" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">عن موكسيرا فارما (About Moxyra Pharma)</h2>
+                <div class="mx-auto style-bar" style="width: 60px; height: 3px; background-color: var(--accent-color);"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center text-lg-start fs-5 text-secondary leading-relaxed">
+                    <p>تأسست موكسيرا فارما بهدف تقديم مفهوم جديد في عالم الرعاية الصحية والجمالية. نبتكر ونطور تركيبات متقدمة تعتمد على المكونات الطبيعية الفعالة والحلول العلمية الحديثة لتلبية الاحتياجات المتزايدة للعملاء والفرق الطبية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الرؤية والرسالة Vision & Mission -->
+    <section id="vision" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-custom p-4 h-100">
+                        <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h4 class="fw-bold text-primary mb-3">رؤيتنا (Our Vision)</h4>
+                        <p class="text-muted fs-6">أن نكون الشركة الرائدة محلياً وإقليمياً في ابتكار حلول وتجهيزات درماتولوجية ودوائية موثوقة تجمع بين الأمان والفعالية الفائقة.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-custom p-4 h-100">
+                        <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h4 class="fw-bold text-primary mb-3">رسالتنا (Our Mission)</h4>
+                        <p class="text-muted fs-6">توفير منتجات عالية الجودة مدعومة بالبحث العلمي، وتطبيق أعلى معايير التصنيع الدوائي لخدمة صحة الإنسان وتطوير قطاع الرعاية الصحية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ماذا نقدم What We Do -->
+    <section id="what-we-do" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">مجالات عملنا (What We Do)</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="card card-custom p-4 h-100">
+                        <i class="fa-solid fa-pump-medical feature-icon"></i>
+                        <h5 class="fw-bold">مستحضرات التجميل العالية الفعالية</h5>
+                        <p class="text-muted small">ابتكار منتجات العناية بالبشرة والشعر القائمة على تركيبات علاجية متكاملة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card card-custom p-4 h-100">
+                        <i class="fa-solid fa-tablets feature-icon"></i>
+                        <h5 class="fw-bold">المكملات الغذائية</h5>
+                        <p class="text-muted small">تطوير مكملات داعمة للجهاز التنفسي والهضمي والصحة العامة بأعلى جودة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card card-custom p-4 h-100">
+                        <i class="fa-solid fa-industry feature-icon"></i>
+                        <h5 class="fw-bold">التصنيع لدى الغير والتطوير</h5>
+                        <p class="text-muted small">تقديم خدمات التطوير العلمي والتصنيع التعاقدي للمستحضرات والمنتجات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المنتجات Our Products -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">منتجاتنا (Our Products)</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3 text-center">
+                        <div class="card-body">
+                            <i class="fa-solid fa-bottle-droplet text-primary mb-3" style="font-size: 3rem;"></i>
+                            <h5 class="card-title fw-bold">العناية بالبشرة (Uryhip)</h5>
+                            <p class="card-text text-muted small">مجموعة ترطيب وتجديد البشرة المتطورة المدعمة باليوريا والبانثينول وزيت روزهيب.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3 text-center">
+                        <div class="card-body">
+                            <i class="fa-solid fa-spray-can-sparkles text-info mb-3" style="font-size: 3rem;"></i>
+                            <h5 class="card-title fw-bold">العناية بالشعر (Moxygain)</h5>
+                            <p class="card-text text-muted small">أنظمة علاجية متكاملة لتقوية الشعر، علاج القشرة، والترميم العميق للبصيلات.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-3 text-center">
+                        <div class="card-body">
+                            <i class="fa-solid fa-capsules text-warning mb-3" style="font-size: 3rem;"></i>
+                            <h5 class="card-title fw-bold">المكملات الغذائية</h5>
+                            <p class="card-text text-muted small">مكملات متخصصة لدعم صحة الجهاز التنفسي، الهضمي، وتركيبات الماغنيسيوم المتقدمة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- لماذا تشارك موكسيرا Why Partner -->
+    <section id="why-us" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">لماذا تشارك موكسيرا؟ (Why Partner with Moxyra)</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <i class="fa-solid fa-microscope text-success fs-1 mb-2"></i>
+                    <h6 class="fw-bold">جودة وتركيبات مدروسة</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <i class="fa-solid fa-graduation-cap text-primary fs-1 mb-2"></i>
+                    <h6 class="fw-bold">دعم تدريبي للصيادلة</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <i class="fa-solid fa-truck-fast text-info fs-1 mb-2"></i>
+                    <h6 class="fw-bold">شراكة وتوزيع مرن</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <i class="fa-solid fa-certificate text-warning fs-1 mb-2"></i>
+                    <h6 class="fw-bold">اعتمادات رسمية</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- شركاؤنا Our Partners -->
+    <section id="partners" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary">شركاؤنا (Our Partners)</h2>
+                <p class="text-muted">نفخر بالتعاون مع كبرى سلاسل الصيدليات والعيادات والمؤسسات الطبية المرموقة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- العنوان والتواصل Address & Contact -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h4 class="text-white fw-bold mb-3">Moxyra Pharma</h4>
+                    <p class="small text-muted">شركة رائدة في صناعة وتطوير مستحضرات التجميل العالية الفعالية والمكملات الغذائية.</p>
+                    <p class="small mb-1"><i class="fa-solid fa-location-dot me-2 text-primary"></i><strong>العنوان:</strong> الإسكندرية، جمهورية مصر العربية</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h4 class="text-white fw-bold mb-3">تواصل معنا (Contact Us)</h4>
+                    <p class="small mb-1"><i class="fa-solid fa-envelope me-2 text-primary"></i>info@moxyrapharma.com</p>
+                    <p class="small mb-3"><i class="fa-brands fa-whatsapp me-2 text-success"></i>واتساب المبيعات والدعم</p>
+                    <div class="d-flex justify-content-md-end gap-3 fs-5">
+                        <a href="#" class="text-light"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-light"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2026 Moxyra Pharma. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
