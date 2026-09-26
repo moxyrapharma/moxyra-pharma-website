@@ -30,7 +30,7 @@
             font-family: 'Cairo', sans-serif !important; 
         }
 
-        /* Bell MT font with enlarged size */
+        /* Bell MT font styled brand text */
         .brand-text {
             font-family: 'Bell MT', 'Bodoni MT', Georgia, serif !important;
             font-weight: 700 !important;
@@ -47,6 +47,29 @@
         .footer { background-color: var(--dark-bg); color: #adb5bd; padding: 50px 0 20px; }
         .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 700; text-decoration: none; }
         .lang-switch:hover { background-color: var(--primary-color); color: #fff; }
+
+        /* Work Cards Styling */
+        .work-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-top: 4px solid var(--brand-purple);
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .work-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f0ebf7;
+            color: var(--brand-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -155,6 +178,75 @@
                         <p class="fs-6 text-secondary leading-relaxed mb-0 text-justify">
                             Building a healthier future by developing safe, highly effective pharmaceutical and therapeutic solutions at a fair value—meeting the real expectations of patients and physicians while cultivating sustainable strategic partnerships that strengthen the healthcare ecosystem.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope of Work Section -->
+    <section id="what-we-do" class="py-5 bg-white" style="padding-top: 90px !important; margin-top: -30px;">
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary mb-3 display-6">Scope of Work</h2>
+                <div class="mx-auto" style="width: 80px; height: 3px; background-color: var(--brand-purple); border-radius: 2px;"></div>
+                <p class="text-secondary mt-3 fs-6">Our operational model integrates formulation excellence with strategic market expansion, serving as a trusted healthcare partner across the Arab Republic of Egypt and global markets.</p>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <!-- Pillar 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">Advanced Cosmeceuticals & Dermatology</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Engineering clinically advanced formulations tailored for dermatologists and comprehensive skincare & haircare needs.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Delivering premium, accessible treatments that rival international standards to bridge real market gaps.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-capsules"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">Nutraceuticals & Future Human Pharma</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Developing unique dietary supplements formulated with uncompromised safety and efficacy to promote general health.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Executing a long-term strategic vision to expand into human pharmaceutical manufacturing, reinforcing national drug security.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">Pharmacy Activation & Retail Alliances</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Cultivating partnerships with retail pharmacy chains across all governorates of Egypt via Partner Education & Sell-out Support.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Expanding distribution through major pharmaceutical networks to maintain prime positioning in prescriptions and recommendations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">Contract Manufacturing, Private Label & Export</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Providing end-to-end Contract Manufacturing and Private Labeling (OEM) services under clients' brand names.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>Fostering transparent B2B commercial alliances for mutual profitability, expanding export capabilities globally.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
