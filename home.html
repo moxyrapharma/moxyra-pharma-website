@@ -30,7 +30,7 @@
             font-family: 'Cairo', sans-serif !important; 
         }
 
-        /* خط Bell MT وحجم أكبر بـ 6 درجات (من 1.35rem إلى 1.75rem) */
+        /* خط Bell MT بنفس الحجم الكبير المحدد */
         .brand-text {
             font-family: 'Bell MT', 'Bodoni MT', Georgia, serif !important;
             font-weight: 700 !important;
@@ -47,6 +47,29 @@
         .footer { background-color: var(--dark-bg); color: #adb5bd; padding: 50px 0 20px; }
         .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 700; text-decoration: none; }
         .lang-switch:hover { background-color: var(--primary-color); color: #fff; }
+
+        /* تنسيقات كروت مجالات عملنا */
+        .work-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-top: 4px solid var(--brand-purple);
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .work-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f0ebf7;
+            color: var(--brand-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -155,6 +178,75 @@
                         <p class="fs-6 text-secondary leading-relaxed mb-0 text-justify">
                             صناعة مستقبل صحي أفضل عبر ابتكار وتطوير حلول صيدلانية وعلاجية آمنة وفائقة الفعالية بسعر عادل، نلبي بها التطلعات الحقيقية للمريض والطبيب، ونبني من خلالها شراكات استراتيجية مستدامة تعزز كفاءة المنظومة الصحية.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مجالات عملنا -->
+    <section id="what-we-do" class="py-5 bg-white" style="padding-top: 90px !important; margin-top: -30px;">
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary mb-3 display-6">مجالات عملنا</h2>
+                <div class="mx-auto" style="width: 80px; height: 3px; background-color: var(--brand-purple); border-radius: 2px;"></div>
+                <p class="text-secondary mt-3 fs-6">نرتكز على منظومة صيدلانية وتصنيعية متكاملة تجمع بين الابتكار العلمي والتوسع الاستراتيجي، لنكون الشريك الموثوق داخل جمهورية مصر العربية وفي الأسواق العالمية.</p>
+            </div>
+
+            <div class="row g-4 mt-2">
+                <!-- المحور 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">مستحضرات التجميل العلاجية وطب الجلدية</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>تركيبات متطورة وفائقة الفعالية تلبي الاحتياجات الشاملة لأطباء الجلدية والعناية بالبشرة والشعر.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>منتجات متوازنة السعر تضاهي وتتفوق على البراندات العالمية لنسد الفجوات الحقيقية في السوق.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- المحور 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-capsules"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">المكملات الغذائية والأدوية البشرية</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>مكملات غذائية فريدة عالية الجودة تعزز الصحة العامة وتخضع لأعلى معايير الأمان الدوائي.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>توسع استراتيجي مستقبلي لنقل الخبرات التصنيعية نحو إنتاج الأدوية البشرية لتعزيز الأمن الدوائي.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- المحور 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">تمكين الصيدليات وسلاسل التوزيع</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>شراكات نمو متبادلة مع كبرى سلاسل الصيدليات في جمهورية مصر العربية عبر برامج التعليم المستمر ودعم المبيعات.</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>توافر شامل في شبكات ومخازن التوزيع لتواجد مستمر في صدارة خيارات الأطباء والصيادلة.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- المحور 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">التصنيع لحساب الغير والتصدير</h5>
+                        <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
+                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>خدمات التصنيع لحساب الغير (Contract Manufacturing) والإنتاج الكامل للعلامات الخاصة (Private Label / OEM).</li>
+                            <li><i class="fa-solid fa-check text-primary me-2"></i>شراكات استثمارية B2B تحقق الربحية المتبادلة وتفتح آفاق التصدير للأسواق الإقليمية والدولية.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
