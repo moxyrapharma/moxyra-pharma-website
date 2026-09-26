@@ -30,7 +30,6 @@
             font-family: 'Cairo', sans-serif !important; 
         }
 
-        /* خط Bell MT بنفس الحجم الكبير المحدد */
         .brand-text {
             font-family: 'Bell MT', 'Bodoni MT', Georgia, serif !important;
             font-weight: 700 !important;
@@ -48,7 +47,6 @@
         .lang-switch { border: 1px solid var(--primary-color); border-radius: 6px; padding: 4px 12px; color: var(--primary-color); font-weight: 700; text-decoration: none; }
         .lang-switch:hover { background-color: var(--primary-color); color: #fff; }
 
-        /* تنسيقات كروت مجالات عملنا */
         .work-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: none;
@@ -69,6 +67,45 @@
             border-radius: 50%;
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+
+        /* تنسيقات كروت المنتجات */
+        .section-banner {
+            background-color: var(--brand-purple);
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 15px 25px;
+        }
+        .product-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 8px 25px rgba(90, 59, 131, 0.12);
+        }
+        .brand-header-box {
+            border: 1px solid #dcd0ef;
+            background-color: #f9f6fc;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+        .status-badge {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #0d8a5f;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pipeline-banner {
+            background-color: #fff9eb;
+            border: 1px solid #fce4b8;
+            color: #a05e03;
+            border-radius: 8px;
+            padding: 15px;
         }
     </style>
 </head>
@@ -194,12 +231,9 @@
             </div>
 
             <div class="row g-4 mt-2">
-                <!-- المحور 1 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
-                        <div class="work-icon">
-                            <i class="fa-solid fa-pump-soap"></i>
-                        </div>
+                        <div class="work-icon"><i class="fa-solid fa-pump-soap"></i></div>
                         <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">مستحضرات التجميل العلاجية وطب الجلدية</h5>
                         <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
                             <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>تركيبات متطورة وفائقة الفعالية تلبي الاحتياجات الشاملة لأطباء الجلدية والعناية بالبشرة والشعر.</li>
@@ -208,12 +242,9 @@
                     </div>
                 </div>
 
-                <!-- المحور 2 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
-                        <div class="work-icon">
-                            <i class="fa-solid fa-capsules"></i>
-                        </div>
+                        <div class="work-icon"><i class="fa-solid fa-capsules"></i></div>
                         <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">المكملات الغذائية والأدوية البشرية</h5>
                         <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
                             <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>مكملات غذائية فريدة عالية الجودة تعزز الصحة العامة وتخضع لأعلى معايير الأمان الدوائي.</li>
@@ -222,12 +253,9 @@
                     </div>
                 </div>
 
-                <!-- المحور 3 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
-                        <div class="work-icon">
-                            <i class="fa-solid fa-store"></i>
-                        </div>
+                        <div class="work-icon"><i class="fa-solid fa-store"></i></div>
                         <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">تمكين الصيدليات وسلاسل التوزيع</h5>
                         <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
                             <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>شراكات نمو متبادلة مع كبرى سلاسل الصيدليات في جمهورية مصر العربية عبر برامج التعليم المستمر ودعم المبيعات.</li>
@@ -236,12 +264,9 @@
                     </div>
                 </div>
 
-                <!-- المحور 4 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-4 shadow-sm work-card rounded-3 bg-white">
-                        <div class="work-icon">
-                            <i class="fa-solid fa-industry"></i>
-                        </div>
+                        <div class="work-icon"><i class="fa-solid fa-industry"></i></div>
                         <h5 class="fw-bold mb-3" style="color: var(--brand-purple);">التصنيع لحساب الغير والتصدير</h5>
                         <ul class="list-unstyled text-secondary fs-6 leading-relaxed mb-0">
                             <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>خدمات التصنيع لحساب الغير (Contract Manufacturing) والإنتاج الكامل للعلامات الخاصة (Private Label / OEM).</li>
@@ -250,6 +275,114 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- قسم منتجاتنا -->
+    <section id="products" class="py-5 bg-light" style="padding-top: 90px !important; margin-top: -30px;">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary mb-3 display-6">منتجاتنا (Our Product Portfolio)</h2>
+                <div class="mx-auto" style="width: 80px; height: 3px; background-color: var(--brand-purple); border-radius: 2px;"></div>
+            </div>
+
+            <!-- الجزء الأول: المنتجات المطروحة في السوق حالياً -->
+            <div class="mb-5">
+                <div class="section-banner mb-4">
+                    <h3 class="fw-bold fs-4 mb-1">المنتجات المطروحة تجارياً بالأسواق (Current Market Products)</h3>
+                    <p class="mb-0 text-light opacity-90 fs-6">"تضم محفظتنا الحالية مستحضرات متوفرة تجارياً وموزعة بفعالية في قطاعات العناية بالبشرة وفروة الرأس"</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- مجموعة URYHIP -->
+                    <div class="col-lg-6">
+                        <div class="product-card h-100 p-4">
+                            <div class="brand-header-box mb-3">
+                                <h3 class="fw-bold text-uppercase mb-1" style="color: var(--brand-purple); font-family: 'Cinzel', serif;">URYHIP</h3>
+                                <div class="fw-semibold text-secondary small">EMOLLIENT SKIN CARE</div>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">خط المرطبات المتقدمة للجلدية (Dermatological Emollient Line)</h5>
+                            <p class="text-secondary small mb-3">تركيبات مرطبة فائقة الفعالية لدعم حاجز البشرة والترطيب العميق، مصممة للاستخدام اليومي والآمن.</p>
+                            <ul class="list-unstyled text-dark fs-6 mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Uryhip Emollient Body Cream</strong> — كريم مرطب للجسم (200g)</li>
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Uryhip Emollient Face Cream</strong> — كريم مرطب للوجه (120g)</li>
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Uryhip Emollient Shower Gel</strong> — شاور جل مرطب للجسم (250ml)</li>
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Uryhip Creamy Face Wash</strong> — غسول كريمي للوجه (200ml)</li>
+                            </ul>
+                            <div class="border-top pt-3">
+                                <span class="status-badge"><i class="fa-solid fa-circle-check"></i> مطروح تجارياً • موزع في مصر والمملكة العربية السعودية</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مجموعة MOXYGAIN -->
+                    <div class="col-lg-6">
+                        <div class="product-card h-100 p-4">
+                            <div class="brand-header-box mb-3">
+                                <h3 class="fw-bold text-uppercase mb-1" style="color: var(--brand-purple); font-family: 'Cinzel', serif;">MOXYGAIN</h3>
+                                <div class="fw-semibold text-secondary small">HAIR & SCALP CARE</div>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">حلول العناية المتخصصة بالفروة والشعر (Hair Revitalizing Solutions)</h5>
+                            <p class="text-secondary small mb-3">حلول موجهة لتقوية الشعر والعناية بالقشرة للفروة الجافة والأولية وتنشيط البصيلات المجهدة.</p>
+                            <ul class="list-unstyled text-dark fs-6 mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Moxygain Anti Oily Dandruff Shampoo</strong> — شامبو القشرة الدهنية (200ml)</li>
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Moxygain Hydra Anti Dry Dandruff Shampoo</strong> — شامبو القشرة الجافة (200ml)</li>
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Moxygain Intensa Repairing Shampoo</strong> — شامبو الترميم الفائق (300ml)</li>
+                                <li class="mb-2"><i class="fa-solid fa-angle-left text-primary me-2"></i><strong>Moxygain Intensa Repairing Conditioner</strong> — بلسم الترميم الفائق (300ml)</li>
+                            </ul>
+                            <div class="border-top pt-3">
+                                <span class="status-badge"><i class="fa-solid fa-circle-check"></i> مطروح تجارياً • موزع في جمهورية مصر العربية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الجزء الثاني: المنتجات المرخصة وقريباً بالأسواق -->
+            <div>
+                <div class="pipeline-banner mb-4">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <i class="fa-solid fa-flask-vial fs-5"></i>
+                        <h3 class="fw-bold fs-4 mb-0" style="color: #854d0e;">المنتجات المرخصة والقادمة قريباً (Pipeline & Innovation)</h3>
+                    </div>
+                    <p class="mb-0 small fw-medium" style="color: #a16207;"><strong>ملاحظة للتوسع B2B والشراكات:</strong> هذه المنتجات مرخصة ومسجلة رسمياً وجاهزة للتوزيع المبكر والتعاقدات وشراكات السوق قبل بدء الإنتاج التجاري الموسع.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Moxygain Intensa Repair -->
+                    <div class="col-lg-6">
+                        <div class="product-card h-100 p-4" style="background-color: #fffdfa; border-color: #fbe6c2;">
+                            <div class="brand-header-box mb-3" style="background-color: #fef7ea; border-color: #f3d193;">
+                                <h4 class="fw-bold mb-1" style="color: #b45309;">Moxygain Intensa Repair</h4>
+                                <div class="fw-bold text-uppercase small" style="color: #d97706;">ADVANCED HAIR REPAIRING LINE</div>
+                            </div>
+                            <p class="text-secondary small mb-3"><strong>التركيز العلاجي:</strong> إعادة بناء وتدعيم ألياف الشعر المجهدة وتقوية الفروة وتغذية البصيلات العميقة.</p>
+                            <ul class="list-unstyled text-dark fs-6 mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-caret-left text-warning me-2"></i><strong>Moxygain Intensa Repairing Leave-In Cream</strong> — كريم ليف ان (300g)</li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-left text-warning me-2"></i><strong>Moxygain Intensa Repairing Mask Cream</strong> — حمام كريم ترميمي (300g)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Moxyra Wellness -->
+                    <div class="col-lg-6">
+                        <div class="product-card h-100 p-4" style="background-color: #fffdfa; border-color: #fbe6c2;">
+                            <div class="brand-header-box mb-3" style="background-color: #fef7ea; border-color: #f3d193;">
+                                <h4 class="fw-bold mb-1" style="color: #b45309;">Moxyra Wellness</h4>
+                                <div class="fw-bold text-uppercase small" style="color: #d97706;">NUTRITIONAL WELLNESS LINE</div>
+                            </div>
+                            <p class="text-secondary small mb-3"><strong>التركيز العلاجي:</strong> مكملات غذائية متخصصة وتركيبات عافية مصممة لتعزيز الحيوية والراحة الصحية الشاملة.</p>
+                            <ul class="list-unstyled text-dark fs-6 mb-0">
+                                <li class="mb-2"><i class="fa-solid fa-caret-left text-warning me-2"></i><strong>Moxyra Active Bee Multivitamin Kids Syrup</strong> (120ml)</li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-left text-warning me-2"></i><strong>Moxyra Magnesium Bisglycinate</strong> (30 tab)</li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-left text-warning me-2"></i><strong>Moxyra Respi Health</strong> (20 tab)</li>
+                                <li class="mb-2"><i class="fa-solid fa-caret-left text-warning me-2"></i><strong>Moxyra Gaselief</strong> (30 cap)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
