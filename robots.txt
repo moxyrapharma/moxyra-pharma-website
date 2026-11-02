@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://moxyrapharma.com/sitemap.xml
