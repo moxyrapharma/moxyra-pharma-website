@@ -66,3 +66,20 @@ footer{background:#10171d;color:#9fb0bd;padding:1.5rem 0;font-size:.9rem}
 #mb{display:block}nav{position:absolute;inset-inline:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none}nav.o{display:block}
 nav ul{flex-direction:column;gap:0;padding:.5rem 1.25rem}nav a{display:block;padding:.7rem 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.brand img{height:58px;width:auto;border-radius:0}
+.slider{max-width:380px;justify-self:center;width:100%}
+.sf{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.35);background:#2b1a4a}
+.sl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s}.sl.on{opacity:1}
+.sc{display:flex;align-items:center;gap:.6rem;margin-top:.8rem;color:#e7defa;font-size:.9rem}.cap{flex:1;text-align:center}
+.sc button{background:rgba(255,255,255,.15);border:1px solid #cdb8ee;color:#fff;border-radius:50%;width:2.4rem;height:2.4rem;font-size:1.3rem;cursor:pointer}
+.vm{margin:0}.vm>div{border:0;border-radius:12px;padding:1.6rem;color:#fff}
+.vm .v{background:linear-gradient(135deg,#3b2563,#5A3B83)}.vm .m{background:linear-gradient(135deg,#0a4f8f,#00857a)}
+.vm h3{color:#fff;display:flex;align-items:center;gap:.7rem}.vm p{color:#f0eafb}
+.vm svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ic{transition:transform .25s,box-shadow .25s,border-color .25s}
+.ic:hover,.ic:focus-visible{transform:translateY(-6px);box-shadow:0 14px 28px rgba(90,59,131,.18);border-color:var(--purple)}
+.ico{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--tint);margin-bottom:.9rem;transition:background .25s}
+.ico svg{width:26px;height:26px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
+.ic:hover .ico,.ic:focus-visible .ico{background:var(--purple)}.ic:hover .ico svg,.ic:focus-visible .ico svg{stroke:#fff}
+.fs{min-height:1.4em}
