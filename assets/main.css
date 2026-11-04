@@ -101,3 +101,15 @@ dialog::backdrop{background:rgba(10,5,20,.78)}dialog img{display:block;width:100
 .x{position:absolute;top:-.8rem;inset-inline-end:-.8rem;width:2.4rem;height:2.4rem;border-radius:50%;border:0;background:var(--teal);color:#0c1f1c;font-size:1.5rem;cursor:pointer;z-index:2}
 @media(max-width:600px){.g3{grid-template-columns:1fr}.brand{font-size:1rem;letter-spacing:.06em;line-height:1.1;gap:.4rem}.brand img{height:44px}
 .bar{gap:.5rem}.lang,#mb{padding:.3rem .6rem;font-size:.85rem}section{padding:3rem 0}.hero{padding:2.5rem 0 3rem}.slider{max-width:300px}}
+
+.slider{max-width:510px}
+@media(min-width:901px){.hero .w{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.slider{max-width:100%}}
+.vm2{display:grid;gap:1.2rem}
+.vc{padding:1.8rem;border-top:5px solid var(--purple)}.vc.m{border-top-color:#00857a}
+.vc .ico.big{width:64px;height:64px;margin-bottom:1.1rem}.vc .ico.big svg{width:32px;height:32px}
+.vc h3{font-size:1.45rem}.vc p{color:var(--ink);font-size:1.03rem}
+.vc.m .ico svg{stroke:#00857a}
+.vc.m:hover,.vc.m:focus-visible{border-color:#00857a}
+.vc.m:hover .ico,.vc.m:focus-visible .ico{background:#00857a}
+.vc.m:hover .ico svg,.vc.m:focus-visible .ico svg{stroke:#fff}
