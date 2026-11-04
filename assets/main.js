@@ -16,3 +16,6 @@ s.addEventListener('mouseenter',stop);s.addEventListener('mouseleave',play);s.ad
 var lb=document.getElementById('lb');if(lb){document.querySelectorAll('.zi').forEach(function(z){z.addEventListener('click',function(){var im=lb.querySelector('img');im.src=z.dataset.full;im.alt=z.dataset.alt;lb.showModal()})});
 lb.addEventListener('click',function(e){if(e.target===lb||e.target.className=='x')lb.close()})}
 })();
+(function(){var ls=[].slice.call(document.querySelectorAll('#nav a[href^="#"]')),m={};ls.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+if(!('IntersectionObserver' in window))return;var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.removeAttribute('aria-current')});var a=m[e.target.id];if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'-45% 0px -50% 0px'});
+Object.keys(m).forEach(function(k){var s=document.getElementById(k);if(s)o.observe(s)})})();
