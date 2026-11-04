@@ -113,3 +113,12 @@ dialog::backdrop{background:rgba(10,5,20,.78)}dialog img{display:block;width:100
 .vc.m:hover,.vc.m:focus-visible{border-color:#00857a}
 .vc.m:hover .ico,.vc.m:focus-visible .ico{background:#00857a}
 .vc.m:hover .ico svg,.vc.m:focus-visible .ico svg{stroke:#fff}
+
+.vc.v{background:linear-gradient(135deg,#3b2563,#5A3B83)}.vc.m{background:linear-gradient(135deg,#0a4f8f,#00857a)}
+.vc,.vc:hover,.vc:focus-visible,.vc.m:hover,.vc.m:focus-visible{border-color:#cdb8ee}.vc.m,.vc.m:hover,.vc.m:focus-visible{border-color:#8fe0d5}
+.vc h3{color:#fff}.vc p{color:#f0eafb}
+.vc .ico,.vc.m .ico{background:rgba(255,255,255,.18)}
+.vc .ico svg,.vc.m .ico svg{stroke:#fff}
+.vc:hover .ico,.vc:focus-visible .ico{background:#fff}.vc.m:hover .ico,.vc.m:focus-visible .ico{background:#fff}
+.vc:hover .ico svg,.vc:focus-visible .ico svg{stroke:#5A3B83}.vc.m:hover .ico svg,.vc.m:focus-visible .ico svg{stroke:#00857a}
+.vc:hover,.vc:focus-visible{box-shadow:0 16px 32px rgba(40,20,80,.3)}
