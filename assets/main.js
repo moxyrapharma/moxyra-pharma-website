@@ -15,7 +15,4 @@ s.querySelector('.pv').onclick=function(){go(-1)};s.querySelector('.nx').onclick
 s.addEventListener('mouseenter',stop);s.addEventListener('mouseleave',play);s.addEventListener('focusin',stop);s.addEventListener('focusout',play);play()}
 var lb=document.getElementById('lb');if(lb){document.querySelectorAll('.zi').forEach(function(z){z.addEventListener('click',function(){var im=lb.querySelector('img');im.src=z.dataset.full;im.alt=z.dataset.alt;lb.showModal()})});
 lb.addEventListener('click',function(e){if(e.target===lb||e.target.className=='x')lb.close()})}
-var f=document.getElementById('cf');if(f)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.fs'),b=f.querySelector('button'),d=new FormData(f);
-if(d.get('_honey'))return;b.disabled=true;
-fetch('https://formsubmit.co/ajax/info@moxyrapharma.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:d.get('n'),company:d.get('c'),email:d.get('e'),type:d.get('t'),message:d.get('m'),_subject:'Moxyra website enquiry',_replyto:d.get('e')})})
-.then(function(r){return r.json()}).then(function(j){if(j.success===true||j.success==='true'){s.textContent=f.dataset.ok;f.reset()}else throw 0}).catch(function(){s.textContent=f.dataset.err}).finally(function(){b.disabled=false})})})();
+})();
