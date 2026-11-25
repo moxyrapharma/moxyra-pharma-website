@@ -147,3 +147,15 @@ dialog::backdrop{background:rgba(10,5,20,.78)}dialog img{display:block;width:100
 @media(max-width:900px){.hc{display:none}.nc{display:block;padding:.6rem 0 .8rem}.nc .btn{width:100%}
 .facts .w{grid-template-columns:repeat(2,1fr)}.facts>.w>div:nth-child(2){border-inline-end:0}.facts>.w>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
 .fg{grid-template-columns:1fr}.hero::before{width:90%;opacity:.1}}
+
+.iq{margin-top:2.5rem;background:rgba(255,255,255,.06);border:1px solid #3b4b59;border-radius:var(--r);padding:1.6rem}
+.iq h3{color:#fff}.iqp{color:#b9c6d1;margin:0 0 1rem}.iqg{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}.iqg .wide{grid-column:1/-1}
+.iq label{display:grid;gap:.25rem;font-size:.92rem}.iq input,.iq select,.iq textarea{font:inherit;padding:.65rem;border-radius:var(--r);border:1px solid #4a5865;background:#fff;color:var(--ink);width:100%}
+.iq .btn{font:inherit;font-weight:600;cursor:pointer;padding:.8rem 1.5rem}.iq .btn.o{color:#fff}.iq .btns{margin-top:1.2rem}.iqs{color:#ffd9a0;min-height:1.4em;margin:.6rem 0 0}.iqn{font-size:.85rem;color:#9fb0bd;margin:.8rem 0 0}
+.btn.o.dlb{color:var(--purple);border-color:var(--purple);background:#fff}.tl.pl{display:inline-block;margin-top:.6rem;font-weight:600}
+.pp{padding:2.5rem 0 4rem}.crumb{font-size:.92rem;margin:0 0 1.5rem}.pgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.pimg{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}.pimg img{width:100%;height:auto}
+.pp h1{font-size:clamp(2rem,4.5vw,3.2rem)}.pp .m{color:var(--mute)}.pp .ingl{padding-inline-start:1.2rem;margin:.4rem 0 1.4rem}
+.pp .stn{background:var(--tint);border-inline-start:4px solid var(--teal);padding:.8rem 1rem;border-radius:var(--r);margin:1.2rem 0}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr;gap:1.5rem}.iqg{grid-template-columns:1fr}}
+@media(max-width:600px){.hero{padding:1.6rem 0 2rem}.hero .w{gap:1.6rem}.eyebrow{font-size:.82rem;margin-bottom:.7rem}.hero p.lead{font-size:1.02rem}.hn{display:none}.btns{margin-top:1.1rem}.btns .btn{flex:1 1 100%}.slider{max-width:260px;margin-inline:auto}}
