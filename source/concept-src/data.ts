@@ -1,0 +1,41 @@
+export type L = { en: string; ar: string };
+export const t = (l: L, lang: 'en' | 'ar') => l[lang];
+
+import antioily from './photos/antioily.webp';
+import bee from './photos/bee.webp';
+import body from './photos/body.webp';
+import conditioner from './photos/conditioner-hero.webp';
+import face from './photos/face.webp';
+import gaselief from './photos/gaselief.webp';
+import hydra from './photos/hydra.webp';
+import leavein from './photos/leavein.webp';
+import magnesium from './photos/magnesium.webp';
+import mask from './photos/mask.webp';
+import respi from './photos/respi.webp';
+import shampoo from './photos/shampoo.webp';
+import shower from './photos/shower.webp';
+import wash from './photos/wash.webp';
+
+export type Product = {
+  id: string; brand: 'URYHIP' | 'MOXYGAIN' | 'MOXYRA WELLNESS'; line: L; name: string; size: L; desc: L;
+  ingredients: string; status: 'available' | 'licensed'; img: string; alt: L;
+};
+const ing = 'Key ingredients (as labelled)';
+export const ingLabel: L = { en: ing, ar: 'أهم المكونات (كما على العبوة)' };
+
+export const products: Product[] = [
+  { id: 'body', brand: 'URYHIP', line: { en: 'Skin care', ar: 'العناية بالبشرة' }, name: 'Uryhip Emollient Body Cream', size: { en: '200 g', ar: '200 جم' }, desc: { en: 'Emollient moisturizing cream for very dry skin.', ar: 'كريم مرطّب ملطّف للبشرة شديدة الجفاف.' }, ingredients: 'Urea 10% · Panthenol 5% · Rosehip oil 1%', status: 'available', img: body, alt: { en: 'Uryhip body cream pump bottle', ar: 'عبوة كريم الجسم يوريهيب' } },
+  { id: 'face', brand: 'URYHIP', line: { en: 'Skin care', ar: 'العناية بالبشرة' }, name: 'Uryhip Emollient Face Cream', size: { en: '120 g', ar: '120 جم' }, desc: { en: 'Emollient face moisturizer for everyday dry skin.', ar: 'كريم مرطّب للوجه للاستخدام اليومي للبشرة الجافة.' }, ingredients: 'Urea 5% · Panthenol 5% · Rosehip oil 1%', status: 'available', img: face, alt: { en: 'Uryhip face cream pump bottle', ar: 'عبوة كريم الوجه يوريهيب' } },
+  { id: 'wash', brand: 'URYHIP', line: { en: 'Skin care', ar: 'العناية بالبشرة' }, name: 'Uryhip Creamy Face Wash', size: { en: '200 ml', ar: '200 مل' }, desc: { en: 'Moisturizing creamy face wash for very dry skin. SLS-free and paraben-free.', ar: 'غسول وجه كريمي مرطّب للبشرة شديدة الجفاف. خالٍ من SLS والبارابين.' }, ingredients: 'Urea 2% · Panthenol 2.5% · Rosehip oil 1%', status: 'available', img: wash, alt: { en: 'Uryhip creamy face wash bottle', ar: 'عبوة غسول الوجه يوريهيب' } },
+  { id: 'shower', brand: 'URYHIP', line: { en: 'Skin care', ar: 'العناية بالبشرة' }, name: 'Uryhip Emollient Shower Gel', size: { en: '250 ml', ar: '250 مل' }, desc: { en: 'Moisturizing shower gel for sensitive, dry, and very dry skin. SLS-free, paraben-free.', ar: 'شاور جل مرطّب للبشرة الحساسة والجافة والجافة جداً. خالٍ من SLS والبارابين.' }, ingredients: 'Urea 5% · Panthenol 2% · Rosehip oil 1%', status: 'available', img: shower, alt: { en: 'Uryhip shower gel bottle', ar: 'عبوة شاور جل يوريهيب' } },
+  { id: 'antioily', brand: 'MOXYGAIN', line: { en: 'Scalp care', ar: 'العناية بفروة الرأس' }, name: 'Moxygain Anti Oily Dandruff Shampoo', size: { en: '200 ml', ar: '200 مل' }, desc: { en: 'Shampoo for oily scalp and oily dandruff. Paraben-free.', ar: 'شامبو لفروة الرأس الدهنية والقشرة الدهنية. خالٍ من البارابين.' }, ingredients: 'Selenium sulfide · Climbazole 0.5% · Piroctone olamine 1% · Salicylic acid · Bentonite 1% · Tea tree oil · Panthenol 2% · Fiberhance', status: 'available', img: antioily, alt: { en: 'Moxygain anti oily dandruff shampoo bottle', ar: 'عبوة شامبو القشرة الدهنية موكسيجين' } },
+  { id: 'hydra', brand: 'MOXYGAIN', line: { en: 'Scalp care', ar: 'العناية بفروة الرأس' }, name: 'Moxygain Hydra Anti Dry Dandruff Shampoo', size: { en: '200 ml', ar: '200 مل' }, desc: { en: 'Hydrating shampoo for dry dandruff and dry scalp.', ar: 'شامبو مرطّب للقشرة الجافة وفروة الرأس الجافة.' }, ingredients: 'Selenium sulfide · Climbazole 0.5% · Piroctone olamine 1% · Salicylic acid · Glycolic acid · Aloe vera · Panthenol 3% · Fiberhance', status: 'available', img: hydra, alt: { en: 'Moxygain hydra anti dry dandruff shampoo bottle', ar: 'عبوة شامبو القشرة الجافة موكسيجين' } },
+  { id: 'shampoo', brand: 'MOXYGAIN', line: { en: 'Intensa repair', ar: 'مجموعة Intensa للترميم' }, name: 'Moxygain Intensa Repairing Shampoo', size: { en: '300 ml', ar: '300 مل' }, desc: { en: 'Repairing shampoo for dry and damaged hair. Paraben-free, SLS-free.', ar: 'شامبو ترميمي للشعر الجاف والتالف. خالٍ من البارابين و SLS.' }, ingredients: 'Fiberhance 1% · Ceramide complex 0.3% · Hydrolyzed keratin & wheat protein · Zinc PCA 1% · Niacinamide 1%', status: 'available', img: shampoo, alt: { en: 'Moxygain Intensa repairing shampoo bottle', ar: 'عبوة شامبو Intensa الترميمي' } },
+  { id: 'conditioner', brand: 'MOXYGAIN', line: { en: 'Intensa repair', ar: 'مجموعة Intensa للترميم' }, name: 'Moxygain Intensa Repairing Conditioner', size: { en: '300 ml', ar: '300 مل' }, desc: { en: 'Repairing conditioner for dry and damaged hair. Paraben-free, SLS-free.', ar: 'بلسم ترميمي للشعر الجاف والتالف. خالٍ من البارابين و SLS.' }, ingredients: 'Squalene 1% · Hyalofill 0.5% · Fiberhance 1% · Ceramide complex 0.3% · Hydrolyzed keratin & wheat protein', status: 'available', img: conditioner, alt: { en: 'Moxygain Intensa repairing conditioner bottle', ar: 'عبوة بلسم Intensa الترميمي' } },
+  { id: 'leavein', brand: 'MOXYGAIN', line: { en: 'Intensa repair', ar: 'مجموعة Intensa للترميم' }, name: 'Moxygain Intensa Repairing Leave-In Cream', size: { en: '300 g', ar: '300 جم' }, desc: { en: 'Leave-in cream for dry and damaged hair.', ar: 'كريم بدون شطف للشعر الجاف والتالف.' }, ingredients: 'Squalene · Hyalofill · Fiberhance · Ceramide complex · Hydrolyzed keratin & wheat protein · Macadamia oil · Jojoba oil', status: 'licensed', img: leavein, alt: { en: 'Moxygain Intensa leave-in cream jar', ar: 'عبوة كريم Intensa بدون شطف' } },
+  { id: 'mask', brand: 'MOXYGAIN', line: { en: 'Intensa repair', ar: 'مجموعة Intensa للترميم' }, name: 'Moxygain Intensa Repairing Cream Mask', size: { en: '300 g', ar: '300 جم' }, desc: { en: 'Repairing cream mask for dry and damaged hair.', ar: 'ماسك كريمي ترميمي للشعر الجاف والتالف.' }, ingredients: 'Squalene · Hyalofill · Fiberhance · Ceramide complex · Hydrolyzed keratin & wheat protein · Macadamia oil · Jojoba oil', status: 'licensed', img: mask, alt: { en: 'Moxygain Intensa cream mask jar', ar: 'عبوة ماسك Intensa الكريمي' } },
+  { id: 'bee', brand: 'MOXYRA WELLNESS', line: { en: 'Dietary supplement', ar: 'مكمل غذائي' }, name: 'Moxyra Active Bee Multivitamin Kids Syrup', size: { en: '120 ml', ar: '120 مل' }, desc: { en: 'Multivitamin syrup supplement for children.', ar: 'شراب مكمل غذائي متعدد الفيتامينات للأطفال.' }, ingredients: 'Royal jelly 75 mg · Vitamins C, E, A, D, folate, B-complex', status: 'licensed', img: bee, alt: { en: 'Active Bee kids syrup bottle and box', ar: 'عبوة وعلبة شراب أكتيف بي للأطفال' } },
+  { id: 'magnesium', brand: 'MOXYRA WELLNESS', line: { en: 'Dietary supplement', ar: 'مكمل غذائي' }, name: 'Moxyra Magnesium Bisglycinate', size: { en: '30 tablets', ar: '30 قرصاً' }, desc: { en: 'Magnesium bisglycinate dietary supplement.', ar: 'مكمل غذائي من المغنيسيوم بيسجلايسينات' }, ingredients: 'Magnesium bisglycinate chelate 150 mg', status: 'licensed', img: magnesium, alt: { en: 'Magnesium bisglycinate box', ar: 'علبة المغنيسيوم بيسجلايسينات' } },
+  { id: 'respi', brand: 'MOXYRA WELLNESS', line: { en: 'Dietary supplement', ar: 'مكمل غذائي' }, name: 'Moxyra Respi Health', size: { en: '20 tablets', ar: '20 قرصاً' }, desc: { en: 'Dietary supplement that supports respiratory health.', ar: 'مكمل غذائي لدعم صحة الجهاز التنفسي' }, ingredients: 'Acetylcysteine · Bromelain · Ivy leaves extract', status: 'licensed', img: respi, alt: { en: 'Respi Health box', ar: 'علبة ريسبي هيلث' } },
+  { id: 'gaselief', brand: 'MOXYRA WELLNESS', line: { en: 'Dietary supplement', ar: 'مكمل غذائي' }, name: 'Moxyra Gaselief', size: { en: '30 capsules', ar: '30 كبسولة' }, desc: { en: 'Dietary supplement that supports digestive health.', ar: 'مكمل غذائي يدعم صحة الجهاز الهضمي.' }, ingredients: 'Targeted gastrointestinal comfort formula', status: 'licensed', img: gaselief, alt: { en: 'Gaselief box', ar: 'علبة جازليف' } },
+];
