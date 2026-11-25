@@ -198,7 +198,6 @@ export function App() {
 
   return (
     <div className="mx" ref={rootRef} dir={lang === 'ar' ? 'rtl' : 'ltr'} lang={lang}>
-      <div className="mx-concept">{x(T.concept)}</div>
       <header className="mx-hero">
         <div className="mx-glow" />
         <nav className="mx-nav">
