@@ -23,3 +23,8 @@ lb.addEventListener('click',function(e){if(e.target===lb||e.target.className=='x
 (function(){var ls=[].slice.call(document.querySelectorAll('#nav a[href^="#"]')),m={};ls.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
 if(!('IntersectionObserver' in window))return;var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.removeAttribute('aria-current')});var a=m[e.target.id];if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'-45% 0px -50% 0px'});
 Object.keys(m).forEach(function(k){var s=document.getElementById(k);if(s)o.observe(s)})})();
+(function(){var f=document.getElementById('iq');if(!f)return;var q=new URLSearchParams(location.search).get('p');if(q){f.elements.p.value=q.slice(0,120);var m=f.elements.r;for(var o=0;o<m.options.length;o++)if(o==4)m.selectedIndex=4}
+f.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){var L=JSON.parse(f.dataset.labels),e=f.elements,s=f.querySelector('.iqs');
+if(!e.n.value.trim()||!e.c.value.trim()){s.textContent=f.dataset.req;(e.n.value.trim()?e.c:e.n).focus();return}s.textContent='';
+var r=[f.dataset.hi,'',L[0]+': '+e.n.value.trim(),L[1]+': '+e.c.value.trim()];if(e.l.value.trim())r.push(L[2]+': '+e.l.value.trim());r.push(L[3]+': '+e.t.value,L[4]+': '+e.r.value);if(e.p.value)r.push(L[6]+': '+e.p.value);if(e.m.value.trim())r.push(L[5]+': '+e.m.value.trim());
+var t=r.join('\n');if(b.dataset.go=='wa')window.open('https://wa.me/'+f.dataset.w+'?text='+encodeURIComponent(t),'_blank','noopener');else location.href='mailto:'+f.dataset.e+'?subject='+encodeURIComponent('Moxyra Pharma: '+e.r.value)+'&body='+encodeURIComponent(t)})})})();

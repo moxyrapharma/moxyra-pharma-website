@@ -298,7 +298,7 @@ def page(i):
         return (f'<article class="pc ic" data-s="{st}" data-b="{bk}"><button class="zi" type="button" data-full="/assets/img/{pid}-900.webp" data-alt="{esc(nm)}" aria-label="{esc(X("zoom", i))}: {esc(nm)}">'
                 f'<img src="/assets/img/{gi(pid)}-480.webp" srcset="/assets/img/{gi(pid)}-480.webp 480w,/assets/img/{gi(pid)}-900.webp 900w" sizes="(max-width:600px) 90vw,280px" width="480" height="600" loading="lazy" alt="{esc(nm)} {esc(sz[i])}"><span class="zm" aria-hidden="true">+</span></button>'
                 f'<div class="pb"><span class="br">{esc(br)} · {esc(cat[i])}</span><h3 dir="ltr">{esc(nm)}</h3><span class="m">{esc(sz[i])}</span><p>{esc(ds[i])}</p>'
-                f'<details><summary>{esc(X("ing", i))}</summary><p dir="ltr">{esc(ing)}</p></details></div></article>')
+                f'<details><summary>{esc(X("ing", i))}</summary><p dir="ltr">{esc(ing)}</p></details><a class="tl pl" href="/{code}/products/{pid}/">{esc(X("pdet", i))} {"←" if i else "→"}</a></div></article>')
     def groups():
         out = ""
         for st, subs in GROUPS:
@@ -334,7 +334,7 @@ def page(i):
 {vm(i)}</div></section>
 <section id="what" class="t"><div class="w"><div class="sh"><h2>{esc(X("what_h", i))}</h2></div><div class="grid">{"".join(f'<div class="c ic" tabindex="0"><span class="ico">{ico(n)}</span><h3>{esc(w[i])}</h3><p>{esc(w[2 + i])}</p></div>' for n, w in enumerate(C["what"]))}</div></div></section>
 <section id="brands"><div class="w"><div class="sh"><h2>{esc(X("brands_h", i))}</h2></div><div class="bg3">{"".join(f'<div class="bc ic {b[3]}" tabindex="0"><button class="zi" type="button" data-full="/assets/img/{b[4]}-900.webp" data-alt="{b[0]}" aria-label="{esc(X("zoom", i))}: {b[0]}">{img(b[4], extra=chr(108)+"oading=lazy width=480 height=270 alt=" + chr(34) + chr(34))}<span class="zm" aria-hidden="true">+</span></button><div><h3 dir="ltr">{b[0]}</h3><p>{esc(b[1 + i])}</p><p class="note">{esc(C["bn"][b[3]][i])}</p><a class="tl" href="#products" data-b="{b[3]}">{esc(X("explore", i))} {"←" if i else "→"}</a></div></div>' for b in C["brands"])}</div></div></section>
-<section id="products" class="t"><div class="w"><div class="sh"><h2>{esc(X("prod_h", i))}</h2><p>{esc(X("prod_p", i))}</p></div><div class="chips" role="group">{chips}</div><div class="chips bchips" role="group">{bchips}</div>
+<section id="products" class="t"><div class="w"><div class="sh"><h2>{esc(X("prod_h", i))}</h2><p>{esc(X("prod_p", i))}</p><p>{dlbtns(i, " dlb")}</p></div><div class="chips" role="group">{chips}</div><div class="chips bchips" role="group">{bchips}</div>
 {groups()}</div></section>
 <section id="quality"><div class="w"><div class="sh"><h2>{esc(X("q_h", i))}</h2><p>{esc(X("q_p", i))}</p></div><h3>{esc(X("q_c", i))}</h3>
 <div class="grid g3">{"".join(f'<div class="c ic" tabindex="0"><span class="ico">{svg(CI[n])}</span><h3>{c[0]}</h3><p>{esc(c[1 + i])}</p></div>' for n, c in enumerate(C["certs"]))}</div>
@@ -345,7 +345,7 @@ def page(i):
 <section id="contact" class="ct"><div class="w"><div class="sh"><h2>{esc(X("con_h", i))}</h2><p>{esc(X("con_p", i))}</p></div>
 <div class="grid g3 cc"><a class="c ic" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to={E}" target="_blank" rel="noopener"><span class="ico">{svg(MAILP)}</span><h3>{esc(X("email", i))}</h3><p>{E}</p></a>
 <a class="c ic" href="https://wa.me/201099688827" target="_blank" rel="noopener"><span class="ico">{svg(CHATP)}</span><h3>{esc(X("phone", i))}</h3><p dir="ltr">{P}</p></a>
-<div class="c ic" tabindex="0"><span class="ico">{svg(PINP)}</span><h3>{esc(X("loc", i))}</h3><p>{esc(X("city", i))}</p></div></div></div></section>
+<div class="c ic" tabindex="0"><span class="ico">{svg(PINP)}</span><h3>{esc(X("loc", i))}</h3><p>{esc(X("city", i))}</p></div></div>{inq(i)}</div></section>
 </main>{footer_html(i)}<dialog id="lb" aria-label="{esc(X('zoom', i))}"><button class="x" type="button" aria-label="{esc(X('close', i))}">×</button><img alt=""></dialog><script src="/assets/main.js?v={VER}" defer></script></body></html>"""
 
 def w(path, s):
@@ -533,9 +533,105 @@ JS += r"""(function(){var ls=[].slice.call(document.querySelectorAll('#nav a[hre
 if(!('IntersectionObserver' in window))return;var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.removeAttribute('aria-current')});var a=m[e.target.id];if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'-45% 0px -50% 0px'});
 Object.keys(m).forEach(function(k){var s=document.getElementById(k);if(s)o.observe(s)})})();
 """
+
+# ---- v4: inquiry form, product pages, sharper hero, shorter mobile hero ----
+C["lead"] = ("Skin care, hair care and wellness brands made in Egypt through qualified manufacturing partners, with clear product information for pharmacies, chains and distributors.",
+             "علامات للعناية بالبشرة والشعر والصحة العامة، صُنعت في مصر لدى شركاء تصنيع مؤهلين، مع معلومات واضحة عن كل منتج للصيدليات والسلاسل والموزعين.")
+C["cta2"] = ("Become a partner", "كن شريكاً")
+C.update({
+ "pdet": ("Product details", "تفاصيل المنتج"),
+ "inq_h": ("Partnership and company profile request", "طلب شراكة أو ملف تعريفي"),
+ "inq_p": ("Choose what you need. Pricing and trade terms are shared directly with qualified partners, not published on this site.", "اختر ما تحتاجه. نشارك الأسعار وشروط التعامل مباشرةً مع الشركاء المؤهلين ولا ننشرها على الموقع."),
+ "iq": [("Your name", "الاسم"), ("Company / pharmacy", "الشركة / الصيدلية"), ("City and country", "المدينة والدولة"), ("I am a…", "أنا…"), ("I need…", "أحتاج…"), ("Notes (optional)", "ملاحظات (اختياري)")],
+ "iq_need": [("Egypt company profile", "الملف التعريفي للسوق المصري"), ("Export company profile", "الملف التعريفي للتصدير"), ("Price list", "قائمة الأسعار"), ("Partnership / distribution discussion", "مناقشة شراكة أو توزيع"), ("Product information", "معلومات عن منتج")],
+ "iq_wa": ("Send on WhatsApp", "أرسل عبر واتساب"), "iq_em": ("Open email draft", "افتح مسودة بريد"),
+ "iq_note": ("Nothing is stored by this site. The button opens WhatsApp with the message ready for you to review and send.", "لا يحفظ الموقع أي بيانات. الزر يفتح واتساب برسالة جاهزة لتراجعها وترسلها."),
+ "iq_req": ("Please fill your name and company.", "من فضلك اكتب الاسم والشركة."),
+ "iq_hi": ("Hello Moxyra Pharma,", "مرحباً موكسيرا فارما،"),
+ "iq_l": [("Name", "الاسم"), ("Company", "الشركة"), ("Location", "الموقع"), ("Type", "النوع"), ("Request", "الطلب"), ("Notes", "ملاحظات"), ("Product", "المنتج")],
+ "p_back": ("All products", "كل المنتجات"), "p_size": ("Pack size", "حجم العبوة"), "p_ask": ("Request product information", "اطلب معلومات المنتج"),
+ "p_stA": ("Commercially available. Pack and trade information on request.", "مطروح تجارياً. تتوفر معلومات العبوة والتعامل عند الطلب."),
+ "p_stL": ("Licensed / approved. This product has not yet entered commercial manufacturing and is not currently available for delivery.", "مرخّص / معتمد. لم يدخل هذا المنتج بعد مرحلة التصنيع التجاري وغير متاح حالياً للتسليم."),
+ "p_stP": ("Upcoming product. Not currently available for delivery.", "منتج قادم. غير متاح حالياً للتسليم."),
+ "p_cat": ("Category", "الفئة"), "dl": ("Download export company profile (PDF)", "حمّل الملف التعريفي للتصدير (PDF)"),
+})
+catpdf = lambda i: '/assets/company-profile/Moxyra-Pharma-Export-Company-Profile.pdf'
+catpdf2 = '/assets/company-profile/Moxyra-Pharma-Egypt-Company-Profile.pdf'
+C["dl2"] = ("Download Egypt company profile (PDF)", "حمّل الملف التعريفي للسوق المصري (PDF)")
+def dlbtns(i, extra=""):
+    return (f'<a class="btn o{extra}" href="{catpdf(i)}" download>{esc(X("dl", i))}</a> '
+            f'<a class="btn o{extra}" href="{catpdf2}" download>{esc(X("dl2", i))}</a>')
+def inq(i):
+    q = C["iq"]; t = lambda k: esc(q[k][i])
+    ty = "".join(f"<option>{esc(a if i == 0 else b)}</option>" for a, b in C["f_opts"])
+    nd = "".join(f"<option>{esc(a if i == 0 else b)}</option>" for a, b in C["iq_need"])
+    lab = json.dumps([x[i] for x in C["iq_l"]], ensure_ascii=False)
+    return (f'<form id="iq" class="iq" novalidate data-hi="{esc(X("iq_hi", i))}" data-req="{esc(X("iq_req", i))}" data-labels="{esc(lab)}" data-e="{E}" data-w="201099688827">'
+            f'<h3>{esc(X("inq_h", i))}</h3><p class="iqp">{esc(X("inq_p", i))}</p><p>{dlbtns(i)}</p><div class="iqg">'
+            f'<label>{t(0)}<input name="n" autocomplete="name" required></label><label>{t(1)}<input name="c" autocomplete="organization" required></label>'
+            f'<label>{t(2)}<input name="l" autocomplete="address-level2"></label><label>{t(3)}<select name="t">{ty}</select></label>'
+            f'<label>{t(4)}<select name="r">{nd}</select></label><label class="wide">{t(5)}<textarea name="m" rows="3"></textarea></label></div>'
+            f'<input type="hidden" name="p"><p class="iqs" role="status" aria-live="polite"></p>'
+            f'<div class="btns"><button class="btn" type="button" data-go="wa">{esc(X("iq_wa", i))}</button></div>'
+            f'<p class="iqn">{esc(X("iq_note", i))}</p></form>')
+
+CSS += """
+.iq{margin-top:2.5rem;background:rgba(255,255,255,.06);border:1px solid #3b4b59;border-radius:var(--r);padding:1.6rem}
+.iq h3{color:#fff}.iqp{color:#b9c6d1;margin:0 0 1rem}.iqg{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}.iqg .wide{grid-column:1/-1}
+.iq label{display:grid;gap:.25rem;font-size:.92rem}.iq input,.iq select,.iq textarea{font:inherit;padding:.65rem;border-radius:var(--r);border:1px solid #4a5865;background:#fff;color:var(--ink);width:100%}
+.iq .btn{font:inherit;font-weight:600;cursor:pointer;padding:.8rem 1.5rem}.iq .btn.o{color:#fff}.iq .btns{margin-top:1.2rem}.iqs{color:#ffd9a0;min-height:1.4em;margin:.6rem 0 0}.iqn{font-size:.85rem;color:#9fb0bd;margin:.8rem 0 0}
+.btn.o.dlb{color:var(--purple);border-color:var(--purple);background:#fff}.tl.pl{display:inline-block;margin-top:.6rem;font-weight:600}
+.pp{padding:2.5rem 0 4rem}.crumb{font-size:.92rem;margin:0 0 1.5rem}.pgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.pimg{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}.pimg img{width:100%;height:auto}
+.pp h1{font-size:clamp(2rem,4.5vw,3.2rem)}.pp .m{color:var(--mute)}.pp .ingl{padding-inline-start:1.2rem;margin:.4rem 0 1.4rem}
+.pp .stn{background:var(--tint);border-inline-start:4px solid var(--teal);padding:.8rem 1rem;border-radius:var(--r);margin:1.2rem 0}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr;gap:1.5rem}.iqg{grid-template-columns:1fr}}
+@media(max-width:600px){.hero{padding:1.6rem 0 2rem}.hero .w{gap:1.6rem}.eyebrow{font-size:.82rem;margin-bottom:.7rem}.hero p.lead{font-size:1.02rem}.hn{display:none}.btns{margin-top:1.1rem}.btns .btn{flex:1 1 100%}.slider{max-width:260px;margin-inline:auto}}
+"""
+JS += r"""(function(){var f=document.getElementById('iq');if(!f)return;var q=new URLSearchParams(location.search).get('p');if(q){f.elements.p.value=q.slice(0,120);var m=f.elements.r;for(var o=0;o<m.options.length;o++)if(o==4)m.selectedIndex=4}
+f.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){var L=JSON.parse(f.dataset.labels),e=f.elements,s=f.querySelector('.iqs');
+if(!e.n.value.trim()||!e.c.value.trim()){s.textContent=f.dataset.req;(e.n.value.trim()?e.c:e.n).focus();return}s.textContent='';
+var r=[f.dataset.hi,'',L[0]+': '+e.n.value.trim(),L[1]+': '+e.c.value.trim()];if(e.l.value.trim())r.push(L[2]+': '+e.l.value.trim());r.push(L[3]+': '+e.t.value,L[4]+': '+e.r.value);if(e.p.value)r.push(L[6]+': '+e.p.value);if(e.m.value.trim())r.push(L[5]+': '+e.m.value.trim());
+var t=r.join('\n');if(b.dataset.go=='wa')window.open('https://wa.me/'+f.dataset.w+'?text='+encodeURIComponent(t),'_blank','noopener');else location.href='mailto:'+f.dataset.e+'?subject='+encodeURIComponent('Moxyra Pharma: '+e.r.value)+'&body='+encodeURIComponent(t)})})})();
+"""
+
+from urllib.parse import quote as _q
+def ppage(pr, i):
+    pid, br, st, nm, sz, cat, ing, ds = pr
+    code, d, lname, loc = LANG[i]; o = 1 - i; oc = LANG[o][0]
+    url = f"{BASE}/{code}/products/{pid}/"
+    h = page(i)
+    head = h.split("<main", 1)[0]; foot = h.split("</main>", 1)[1]
+    head = head.replace(f'<link rel="canonical" href="{BASE}/{code}/">', f'<link rel="canonical" href="{url}">')
+    head = head.replace(f'hreflang="en" href="{BASE}/en/"', f'hreflang="en" href="{BASE}/en/products/{pid}/"').replace(f'hreflang="ar" href="{BASE}/ar/"', f'hreflang="ar" href="{BASE}/ar/products/{pid}/"').replace(f'hreflang="x-default" href="{BASE}/"', f'hreflang="x-default" href="{BASE}/en/products/{pid}/"')
+    head = head.replace(f'<link rel="alternate" hreflang="{oc}" href="{BASE}/{oc}/products/{pid}/">', f'<link rel="alternate" hreflang="{oc}" href="{BASE}/{oc}/products/{pid}/">')
+    ttl = f"{nm} | Moxyra Pharma"
+    import re as _r
+    head = _r.sub(r"<title>.*?</title>", f"<title>{esc(ttl)}</title>", head)
+    head = _r.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(ds[i])}">', head)
+    head = _r.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(ttl)}">', head)
+    head = _r.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(ds[i])}">', head)
+    head = _r.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', head)
+    head = head.replace(f"{BASE}/assets/img/body-900.webp", f"{BASE}/assets/img/{gi(pid)}-900.webp")
+    head = head.replace('<a class="lang" href="/%s/"' % oc, f'<a class="lang" href="/{oc}/products/{pid}/"')
+    head = head.replace('href="#', f'href="/{code}/#')
+    foot = foot.replace('href="#', f'href="/{code}/#')
+    ld = json.dumps({"@context": "https://schema.org", "@type": "Product", "name": nm, "brand": {"@type": "Brand", "name": br}, "description": ds[i], "image": f"{BASE}/assets/img/{gi(pid)}-900.webp", "url": url}, ensure_ascii=False)
+    head = head.replace("</head>", f'<script type="application/ld+json">{ld}</script></head>')
+    ings = "".join(f"<li>{esc(x.strip())}</li>" for x in ing.split("·"))
+    stk = {"A": "p_stA", "L": "p_stL", "P": "p_stP"}[st]
+    body = (f'<main id="main"><section class="pp"><div class="w"><p class="crumb"><a href="/{code}/#products">{esc(X("p_back", i))}</a></p>'
+            f'<div class="pgrid"><div class="pimg"><img src="/assets/img/{gi(pid)}-900.webp" srcset="/assets/img/{gi(pid)}-480.webp 480w,/assets/img/{gi(pid)}-900.webp 900w" sizes="(max-width:900px) 90vw,480px" width="900" height="{1125 if pid == "conditioner" else 1125}" alt="{esc(nm)} {esc(sz[i])}"></div>'
+            f'<div><span class="bd {st}">{esc(ST[st][i])}</span><p class="br">{esc(br)} · {esc(cat[i])}</p><h1 dir="ltr">{esc(nm)}</h1><p class="m">{esc(X("p_size", i))}: {esc(sz[i])}</p><p>{esc(ds[i])}</p>'
+            f'<h3>{esc(X("ing", i))}</h3><ul class="ingl" dir="ltr">{ings}</ul><p class="stn">{esc(X(stk, i))}</p>'
+            f'<a class="btn" href="/{code}/?p={_q(nm)}#iq">{esc(X("p_ask", i))}</a></div></div></div></section></main>')
+    return head + body + foot
+
 VER = hashlib.md5((CSS + JS).encode()).hexdigest()[:8]
 
 for i in (0, 1): w(f"{LANG[i][0]}/index.html", page(i))
+for _p in PR:
+    for i in (0, 1): w(f"{LANG[i][0]}/products/{_p[0]}/index.html", ppage(_p, i))
 w("assets/main.css", CSS); w("assets/main.js", JS)
 red = lambda t: f'<!DOCTYPE html><meta charset="utf-8"><title>Moxyra Pharma</title><link rel="canonical" href="{BASE}{t}"><meta http-equiv="refresh" content="0;url={t}"><a href="{t}">Moxyra Pharma</a>'
 w("home.html", red("/ar/")); w("en.html", red("/en/"))
@@ -547,7 +643,8 @@ w("index.html", f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><
 w("404.html", '<!DOCTYPE html><meta charset="utf-8"><title>404 | Moxyra Pharma</title><meta name="viewport" content="width=device-width,initial-scale=1"><body style="font:1.2rem system-ui;text-align:center;padding:4rem"><h1>404</h1><p><a href="/en/">English home</a> · <a href="/ar/">الصفحة الرئيسية</a></p></body>')
 w("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
 w("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "".join(
-    f'<url><loc>{BASE}/{c}/</loc><xhtml:link rel="alternate" hreflang="en" href="{BASE}/en/"/><xhtml:link rel="alternate" hreflang="ar" href="{BASE}/ar/"/></url>\n' for c in ("en", "ar")) + "</urlset>\n")
+    f'<url><loc>{BASE}/{c}/</loc><xhtml:link rel="alternate" hreflang="en" href="{BASE}/en/"/><xhtml:link rel="alternate" hreflang="ar" href="{BASE}/ar/"/></url>\n' for c in ("en", "ar")) + "".join(
+    f'<url><loc>{BASE}/{c}/products/{q[0]}/</loc><xhtml:link rel="alternate" hreflang="en" href="{BASE}/en/products/{q[0]}/"/><xhtml:link rel="alternate" hreflang="ar" href="{BASE}/ar/products/{q[0]}/"/></url>\n' for q in PR for c in ("en", "ar")) + "</urlset>\n")
 w("_redirects", "/home.html /ar/ 301\n/en.html /en/ 301\n")
 w("_headers", "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n")
 print("built", OUT)
