@@ -77,6 +77,7 @@ body { background: #fff; }
 .mx-values h3 { font-size:20px; color:var(--mx-deep); }
 .mx-values p { color:var(--mx-mute); }
 .mx-sub { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--mx-purple); margin:48px 0 20px; }
+.mx-what-h { margin:48px 0 20px; }
 .mx[dir=rtl] .mx-sub { letter-spacing:0; font-size:16px; text-transform:none; }
 .mx-what { align-items:start; display:grid; gap:14px; }
 .mx-what > div { display:none; }

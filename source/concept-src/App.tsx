@@ -253,7 +253,7 @@ export function App() {
             </button>
           ))}
         </div>
-        <h3 className="mx-sub">{x(T.whatH)}</h3>
+        <h2 className="mx-h2 mx-what-h">{x(T.whatH)}</h2>
         <div className="mx-what">
           {T.what.map(([a, b], i) => (
             <button type="button" key={a.en} aria-expanded={openWhat === i} className={`mx-tile mx-wt ${openWhat === i ? 'is-open' : ''}`} onClick={() => setOpenWhat(openWhat === i ? null : i)}>
